@@ -16,7 +16,7 @@ jobs:
     name: Linting Check
     uses: the-guild-org/shared-config/.github/workflows/lint.yml@main
     with:
-      script: yarn lint
+      script: yarn ci:lint
     secrets:
       githubToken: ${{ secrets.GITHUB_TOKEN }}
   prettier-check:
