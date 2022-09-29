@@ -1,6 +1,6 @@
 import type { Loader } from "cosmiconfig";
 import { transformSync, type Options } from "@swc/core";
-import vm from "node:vm";
+import vm from "vm";
 
 export function TypeScriptSWCLoader(options?: Options): Loader {
   return (_path: string, content: string) => {
