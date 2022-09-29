@@ -14,7 +14,8 @@
     "prettier": "prettier --write --list-different .",
     "prettier:check": "prettier --check .",
     "lint": "eslint .",
-    "prerelease": "yarn build"
+    "prerelease": "yarn build",
+    "release": "changeset publish"
   },
   "dependencies": {
     "@swc/core": "^1.3.3",
@@ -25,6 +26,8 @@
     "typescript"
   ],
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.6",
+    "@changesets/cli": "^2.24.4",
     "@types/jest": "^29.1.0",
     "@types/node": "^18.7.23",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
