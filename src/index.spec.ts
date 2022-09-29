@@ -1,15 +1,9 @@
-import { Loader } from "cosmiconfig";
 import { readFileSync } from "fs";
 import { resolve } from "path";
 import { TypeScriptSWCLoader } from ".";
 
 describe("TypeScriptSWCLoader", () => {
   const fixturesPath = resolve(__dirname, "fixtures");
-  let loader: Loader;
-
-  beforeEach(() => {
-    loader = TypeScriptSWCLoader();
-  });
 
   describe("loading a valid configuration typescript file", () => {
     describe("without options", () => {

@@ -17,7 +17,7 @@ export function TypeScriptSWCLoader(options?: Options): Loader {
       },
       ...options,
     });
-    var vmScript = new vm.Script(script.code);
+    const vmScript = new vm.Script(script.code);
     const sandbox = { module: { exports: {} }, exports: {} };
     vmScript.runInNewContext(sandbox, options);
     const result: any = sandbox.exports;
