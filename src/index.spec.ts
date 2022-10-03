@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
 import { resolve } from "path";
-import { TypeScriptSWCLoader } from ".";
+import { TypeScriptSWCLoader } from "./index";
 
 describe("TypeScriptSWCLoader", () => {
   const fixturesPath = resolve(__dirname, "fixtures");

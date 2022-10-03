@@ -20,6 +20,7 @@ export function TypeScriptSWCLoader(options?: Options): Loader {
     const vmScript = new vm.Script(script.code);
     const sandbox = { module: { exports: {} }, exports: {} };
     vmScript.runInNewContext(sandbox, options);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const result: any = sandbox.exports;
     return result.default || result;
   };
