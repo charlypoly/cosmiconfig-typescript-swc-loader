@@ -56,7 +56,7 @@ jobs:
       - esm
     strategy:
       matrix:
-        os: [ubuntu-latest] # remove windows to speed up the tests
+        os: [ubuntu-latest, windows-latest]
         node_version: [12, 14, 16, 18]
     steps:
       - name: Checkout
