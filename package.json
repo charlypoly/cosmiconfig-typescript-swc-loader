@@ -13,8 +13,8 @@
     "build": "bob build --single",
     "prettier": "prettier --write --list-different .",
     "prettier:check": "prettier --check .",
-    "lint": "eslint .",
-    "ci:lint": "eslint --ext .ts . --output-file eslint_report.json --format json",
+    "lint": "eslint --ignore-path .gitignore .",
+    "ci:lint": "eslint --ignore-path .gitignore --ext .ts . --output-file eslint_report.json --format json",
     "prerelease": "yarn build",
     "release": "changeset publish"
   },
