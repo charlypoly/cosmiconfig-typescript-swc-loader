@@ -1,6 +1,3 @@
-node_modules/
 dist/
-yarn.lock
 .bob/
-.github/
 .changeset/

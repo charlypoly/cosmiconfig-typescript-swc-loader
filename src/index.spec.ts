@@ -11,7 +11,7 @@ describe("TypeScriptSWCLoader", () => {
         expect(
           TypeScriptSWCLoader()(
             "",
-            readFileSync(resolve(fixturesPath, "validFile.ts")).toString()
+            readFileSync(resolve(fixturesPath, "validFile.ts"), 'utf8')
           )
         ).toEqual({
           test: true,
@@ -26,7 +26,7 @@ describe("TypeScriptSWCLoader", () => {
         expect(() =>
           TypeScriptSWCLoader()(
             "",
-            readFileSync(resolve(fixturesPath, "invalidFile.ts")).toString()
+            readFileSync(resolve(fixturesPath, "invalidFile.ts"), 'utf8')
           )
         ).toThrow("t is not defined");
       });

@@ -28,7 +28,7 @@ jobs:
       - name: Setup env
         uses: the-guild-org/shared-config/setup@main
         with:
-          nodeVersion: 17
+          nodeVersion: 18
       - name: Prettier Check
         run: yarn prettier:check
   esm:
@@ -40,7 +40,7 @@ jobs:
       - name: Setup env
         uses: the-guild-org/shared-config/setup@main
         with:
-          nodeVersion: 17
+          nodeVersion: 18
       - name: Build
         run: yarn build
         env:
