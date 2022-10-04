@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "composite": true,
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "declaration": true,
+    "declarationMap": true,
+    "noImplicitAny": false,
+    "importHelpers": true,
+    "removeComments": false,
+    "esModuleInterop": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2018",
+    "sourceMap": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules", "dist", "src/*.spec.ts", "src/fixtures"]
+}
