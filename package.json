@@ -1,6 +1,6 @@
 {
   "name": "cosmiconfig-typescript-swc-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fast TypeScript config file handler for cosmiconfig using SWC",
   "main": "dist/cjs/index.js",
   "repository": "git@github.com:charlypoly/cosmiconfig-typescript-swc-loader.git",
