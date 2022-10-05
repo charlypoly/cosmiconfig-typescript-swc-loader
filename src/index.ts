@@ -1,7 +1,7 @@
 import type { Loader } from "cosmiconfig";
 import { transformSync, type Options } from "@swc/core";
 import vm from "vm";
-import { safeRequire } from "./safeRequire";
+import { safeRequire } from "./safeRequire.js";
 
 const isCommonJS = !!globalThis.__dirname || process.env.NODE_ENV === "test";
 

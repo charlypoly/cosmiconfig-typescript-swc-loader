@@ -1,3 +1,3 @@
 import { createRequire } from "module";
 
-export const safeRequire = createRequire(import.meta.url);
+export const safeRequire = createRequire(process.cwd());
