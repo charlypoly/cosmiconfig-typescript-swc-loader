@@ -10,7 +10,7 @@ export function TypeScriptSWCLoader(options?: Options): Loader {
         type: "commonjs",
       },
       jsc: {
-        target: "es3",
+        target: "es5",
 
         parser: {
           syntax: "typescript",
@@ -19,7 +19,7 @@ export function TypeScriptSWCLoader(options?: Options): Loader {
       ...options,
     });
     const vmScript = new vm.Script(script.code);
-    const sandbox = { module: { exports: {} }, exports: {} };
+    const sandbox = { module: { exports: {} }, exports: {}, require, console };
     vmScript.runInNewContext(sandbox, options);
     return Object.keys(sandbox.module.exports).length > 0
       ? sandbox.module.exports

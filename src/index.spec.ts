@@ -91,4 +91,32 @@ describe("TypeScriptSWCLoader", () => {
       });
     });
   });
+
+  describe("dotansimha/graphql-code-generator#8437 reproduction", () => {
+    it("should return a valid config object", () => {
+      expect(
+        TypeScriptSWCLoader()(
+          "",
+          readFileSync(
+            resolve(fixturesPath, "validFileWithGlobalImport.ts"),
+            "utf8"
+          )
+        )
+      ).toEqual({
+        test: true,
+      });
+    });
+  });
+  describe("with module options", () => {
+    it("should return a valid config object", () => {
+      expect(
+        TypeScriptSWCLoader({ module: { type: "commonjs" } })(
+          "",
+          readFileSync(resolve(fixturesPath, "validFile.cts"), "utf8")
+        )
+      ).toEqual({
+        test: true,
+      });
+    });
+  });
 });
