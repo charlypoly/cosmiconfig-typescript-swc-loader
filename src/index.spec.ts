@@ -3,6 +3,8 @@ import { readFileSync } from "fs";
 import { resolve } from "path";
 import { TypeScriptSWCLoader } from "./index";
 
+jest.mock("./safeRequire");
+
 describe("TypeScriptSWCLoader", () => {
   const fixturesPath = resolve(__dirname, "fixtures");
 
@@ -88,6 +90,22 @@ describe("TypeScriptSWCLoader", () => {
         } catch (e: unknown) {
           expect((e as unknown as Error).message).toEqual("t is not defined");
         }
+      });
+    });
+  });
+
+  describe("dotansimha/graphql-code-generator#8437 reproduction", () => {
+    it("should return a valid config object", () => {
+      expect(
+        TypeScriptSWCLoader()(
+          "",
+          readFileSync(
+            resolve(fixturesPath, "validFileWithGlobalImport.ts"),
+            "utf8"
+          )
+        )
+      ).toEqual({
+        test: true,
       });
     });
   });

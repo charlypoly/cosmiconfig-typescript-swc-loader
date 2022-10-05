@@ -7,5 +7,5 @@ module.exports = {
     "^.+\\.(t|j)s$": "babel-jest",
   },
   testEnvironment: "node",
-  // resolver: "bob-the-bundler/jest-resolver.js",
+  resolver: "bob-the-bundler/jest-resolver.js",
 };
