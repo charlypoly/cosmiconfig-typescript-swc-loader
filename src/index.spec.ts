@@ -107,16 +107,4 @@ describe("TypeScriptSWCLoader", () => {
       });
     });
   });
-  describe("with module options", () => {
-    it("should return a valid config object", () => {
-      expect(
-        TypeScriptSWCLoader({ module: { type: "commonjs" } })(
-          "",
-          readFileSync(resolve(fixturesPath, "validFile.cts"), "utf8")
-        )
-      ).toEqual({
-        test: true,
-      });
-    });
-  });
 });
