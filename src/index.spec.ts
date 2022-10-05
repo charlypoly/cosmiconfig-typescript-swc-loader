@@ -3,6 +3,8 @@ import { readFileSync } from "fs";
 import { resolve } from "path";
 import { TypeScriptSWCLoader } from "./index";
 
+jest.mock("./safeRequire");
+
 describe("TypeScriptSWCLoader", () => {
   const fixturesPath = resolve(__dirname, "fixtures");
 
